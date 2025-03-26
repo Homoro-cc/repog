@@ -135,7 +135,7 @@ const maskingProjects = [
     "pepsigt",
     "pernodus",
     "pngjp",
-    "pngza",
+    "pngza2",
     "sanofiau",
     "sanofieg",
     "sanofijp",
