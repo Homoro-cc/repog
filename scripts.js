@@ -143,12 +143,12 @@ const maskingProjects = [
     "sksignals",
     "straussfritolayil",
     "straussil",
-    "suntoryjp",
+    "suntoryjp2",
     "tevade",
     "tevahu",
     "tevapl",
     "tevaua",
-    "tnuvailv",
+    "tnuvailv2",
     "ulbr",
     "ules",
     "ulgr",
@@ -165,6 +165,7 @@ const maskingProjects = [
     "unileverus",
     "unilevrpr"
 ];
+
 
 // Function to get the current date and time in Sri Lanka time zone
 function getSriLankaDateTime() {
