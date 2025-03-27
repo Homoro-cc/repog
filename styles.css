@@ -244,3 +244,75 @@ td.centered {
     from {transform: translateY(-50px);}
     to {transform: translateY(0);}
 }
+
+/* Styles for the new lrbottom container and its children */
+#div2-lrbottom {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.lr-left, .lr-right {
+    width: 48%; /* Slightly less than 50% to account for spacing */
+}
+
+/* Adjust the existing div2-bottom and div2-lbottom styles */
+#div2-bottom, #div2-lbottom {
+    background-color: #f0e68c; /* Light yellow background */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0; /* Remove margin since we're controlling spacing with flex */
+    display: flex;
+    align-items: center;
+    height: 100%; /* Make both divs equal height */
+}
+
+/* Ensure the content inside these divs stays aligned */
+#div2-bottom .bold-text, 
+#div2-lbottom .bold-text {
+    min-width: 60px; /* Ensure consistent alignment */
+}
+
+#deno-value, #t-deno-value {
+    font-weight: bold;
+    margin-left: 5px;
+    color: #006400; /* Dark green color */
+}
+
+/* Ensure the new column aligns with others */
+#divb table th:nth-child(9),
+#divb table td:nth-child(9) {
+    text-align: center;
+    width: 80px; /* Adjust width as needed */
+}
+
+/* Styles for the new div2-t container */
+#div2-t {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d3d3d3; /* Light gray background */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.t-left, .t-right {
+    width: 48%;
+}
+
+#prod-value, #utl-value {
+    font-weight: bold;
+    color: #006400; /* Dark green color */
+    margin-left: 5px;
+}
+
+/* Update existing styles to accommodate new div */
+.nested-div {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin-right: 50px;
+    margin-bottom: 10px; /* Add some bottom margin */
+}
