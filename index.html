@@ -26,6 +26,8 @@
                 <span class="bold-text">Table Rows :</span> <span id="table-rows-count">0</span>
             </div>
         </div>
+
+
         <div class="nested-div" id="div2">
             <div class="nested-inner-div">
                 <span class="bold-text">Task :</span>
@@ -43,7 +45,29 @@
                     <option value="c">c</option>
                 </select>
             </div>
+            <div class="nested-inner-div" id="div2-lrbottom">
+                <div class="lr-left">
+                    <div class="nested-inner-div" id="div2-bottom">
+                        <span class="bold-text">Deno :</span> <span id="deno-value">0</span>
+                    </div>
+                </div>
+                <div class="lr-right">
+                    <div class="nested-inner-div" id="div2-lbottom">
+                        <span class="bold-text">T-Deno :</span> <span id="t-deno-value">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nested-inner-div" id="div2-t">
+                <div class="t-left">
+                    <span class="bold-text">Prod :</span> <span id="prod-value">0</span>
+                </div>
+                <div class="t-right">
+                    <span class="bold-text">UTL :</span> <span id="utl-value">0</span>
+                </div>
+            </div>
         </div>
+
+
         <div class="nested-div" id="div3">
             <div class="nested-inner-div">
                 <span class="bold-text">Seens :</span>
@@ -67,6 +91,8 @@
         <div class="buttons">
             <button class="clear-button">Clear</button>
             <button class="copy-button">Copy</button>
+            <button class="edit-button">Edit</button>
+            <button class="save2-button">Save</button>
         </div>
         <table>
             <thead>
@@ -79,6 +105,7 @@
                     <th>Seens</th>
                     <th>MTime</th>
                     <th>STime</th>
+                    <th>TDeno</th> <!-- New column added -->
                 </tr>
             </thead>
             <tbody>
