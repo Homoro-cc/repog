@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <!-- Material Symbols for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+</head>
+<body>
+
+    <!-- Change this in index.html -->
+    <div class="left-ribbon">
+        <span class="material-symbols-outlined icon " onclick="window.location.href='../index.html'">home</span>
+        <span class="material-symbols-outlined icon icon-selected" onclick="showContent('table')">table</span>
+        <span class="material-symbols-outlined icon" onclick="window.location.href='../Graffana/index.html'">query_stats</span>
+    </div>
+
+    <!-- Title Bar -->
+    <div class="title-bar">
+        <h2>Data Table</h2>
+        <div id="notification" class="notification"></div>
+    </div>
+
+    <!-- Diva - Div1 -->
+    <div class="content-div" id="diva">
+        <div class="nested-div" id="div1">
+            <div class="nested-inner-div">
+                <span class="bold-text">Date :</span> <span id="current-date"></span>
+            </div>
+            <div class="nested-inner-div">
+                <span class="bold-text">Time :</span> <span id="current-time"></span>
+            </div>
+        </div>
+
+        <!-- Diva - Div2 -->
+        <div class="nested-div" id="div2">
+            <div class="nested-inner-div">
+                <span class="bold-text">Task :</span>
+                <select class="styled-select" id="task-select">
+                    <option value="Stitching">Stitching</option>
+                    <option value="Masking Engine">Masking Engine</option>
+                    <option value="Masking Price Labels">Masking Price Labels</option>
+                    <option value="Voting">Voting</option>
+                </select>
+            </div>
+            <div class="nested-inner-div">
+                <span class="bold-text">Project :</span>
+                <select class="styled-select" id="project-select">
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+            </div>
+            <!-- New container div for the row -->
+            <div class="nested-inner-div-container">
+                <div class="nested-inner-div t-left">
+                    <span class="bold-text">Table Rows :</span> <span id="table-rows-count">0</span>
+                </div>
+                <div class="nested-inner-div t-right" id="div2-t">
+                    <span class="bold-text">UTL :</span> <span id="utl-value">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diva - Div3 -->
+        <div class="nested-div" id="div3">
+            <div class="nested-inner-div">
+                <span class="bold-text">Seens :</span>
+                <input type="text" class="styled-input" id="seens-input" />
+            </div>
+            <div class="nested-inner-div">
+                <span class="bold-text">MTime :</span>
+                <input type="text" class="styled-input" id="mtime-input" />
+            </div>
+            <div class="nested-inner-div">
+                <span class="bold-text">STime :</span>
+                <input type="text" class="styled-input" id="stime-input" />
+            </div>
+            <div class="nested-inner-div">
+                <button class="save-button">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-space"></div>
+
+    <!-- Divb -->
+    <div class="content-div" id="divb">
+        <div class="buttons">
+            <div>
+                <button class="clear-button">Clear</button>
+                <button class="copy-button">Copy</button>
+            </div>
+            <div class="right-buttons">
+                <button class="edit-button">Edit</button>
+                <button class="save2-button">Save</button>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Task</th>
+                    <th id="project-header">Project</th>
+                    <th>Seens</th>
+                    <th>MTime</th>
+                    <th>STime</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will go here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Scroll Boxes -->
+    <div class="scroll-boxes">
+        <div class="scroll-box" id="scroll-to-top">☝️</div>
+        <div class="scroll-box" id="scroll-to-bottom">👇</div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
