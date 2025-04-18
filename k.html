@@ -1,0 +1,147 @@
+<html>
+<head>
+    <title>Admin Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: #555;
+        }
+        .icon {
+            color: white;
+            transition: color 0.3s, background-color 0.3s;
+            cursor: pointer;
+        }
+        .icon:hover {
+            color: #ffff00; /* Yellow color on hover */
+            background-color: #333;
+        }
+        .icon-selected {
+            color: #ff0000;
+            background-color: #333;
+        }
+        .icon-selected:hover {
+            color: #00ff00; /* Green color on hover for selected icon */
+        }
+    </style>
+</head>
+<body class="text-white h-screen">
+
+    <!-- Title Bar -->
+    <div class="bg-purple-700 p-4 w-full">
+        <h1 class="text-2xl"><b>Admin Page</b></h1>
+    </div>
+    <div class="flex h-full">
+
+        <!-- Left Side Ribbon -->
+        <div class="bg-[#444443] w-[5%] h-full flex flex-col items-center py-4 space-y-4">
+            <span class="material-symbols-outlined icon icon-selected p-2 rounded" id="home-icon" onclick="showContent('home')">home</span>
+            <span class="material-symbols-outlined icon p-2 rounded" id="table-icon" onclick="showContent('table')">table</span>
+            <span class="material-symbols-outlined icon p-2 rounded" id="stats-icon" onclick="showContent('stats')">query_stats</span>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+
+            <!-- Home Div -->
+            <div class="p-4 border border-white" id="home-content">
+                <h1 class="text-2xl">Home Div</h1>
+            </div>
+
+            <!-- Table Div -->
+            <div class="hidden flex items-center justify-center h-full" id="table-content">
+                <div class="p-8 w-full h-full flex flex-col items-center justify-center space-y-8">
+                    <div class="bg-white p-4 w-[95%] h-[95%] flex items-center justify-center rounded space-x-4" id="div-t">
+                        <div class="w-[30%] h-full flex flex-col items-center justify-center rounded space-y-4" id="divt-1">
+                            <div class="bg-white w-[90%] h-[20%] rounded p-4 text-black flex items-center border border-black text-sm" id="divt-1.1">
+                                <h2 class="text-xl"><b>Date :</b> Wednesday, April 16, 2025</h2>
+                            </div>
+                            <div class="bg-white w-[90%] h-[20%] rounded p-4 text-black flex items-center border border-black text-sm" id="divt-1.2">
+                                <h2 class="text-xl"><b>Time :</b> 03:37:25 PM</h2>
+                            </div>
+                            <div class="bg-white w-[90%] h-[20%] rounded p-4 text-black flex items-center text-sm" id="divt-1.3"> </div>
+                            <div class="bg-white w-[90%] h-[20%] rounded p-4 text-black flex items-center text-sm" id="divt-1.4"> </div>
+                        </div>
+                        <div class="w-[30%] h-full flex flex-col items-center justify-center rounded space-y-4" id="divt-2">
+                            <div class="bg-white w-[90%] h-[20%] rounded p-4 text-black flex items-center border border-black text-sm" id="divt-2.1">
+                                <h2 class="text-xl"><b>Task :</b></h2>
+                                <select class="ml-2 p-2 rounded bg-white text-black">
+                                    <option value="task1">Task 1</option>
+                                    <option value="task2">Task 2</option>
+                                    <option value="task3">Task 3</option>
+                                </select>
+                            </div>
+                            <div class="bg-white w-[90%] h-[20%] rounded p-4 text-black flex items-center border border-black text-sm" id="divt-2.2">
+                                <h2 class="text-xl"><b>Project :</b></h2>
+                                <select class="ml-2 p-2 rounded bg-white text-black">
+                                    <option value="project1">Project 1</option>
+                                    <option value="project2">Project 2</option>
+                                    <option value="project3">Project 3</option>
+                                </select>
+                            </div>
+                            <div class="bg-white w-[90%] h-[20%] rounded p-4 text-black flex items-center border border-black text-sm" id="divt-2.3">
+                                <h2 class="text-xl"><b>Count :</b></h2>
+                            </div>
+                            <div class="bg-white w-[90%] h-[20%] rounded p-4 text-black flex items-center border border-black text-sm" id="divt-2.4">
+                                <h2 class="text-xl"><b>UTL :</b></h2>
+                            </div>
+                        </div>
+                        <div class="w-[30%] h-full flex flex-col items-center justify-center rounded space-y-4" id="divt-3">
+                            <div class="bg-white w-[90%] h-[20%] rounded p-4 text-black flex items-center border border-black text-sm" id="divt-3.1">
+                                <h2 class="text-xl"><b>Seens :</b></h2>
+                            </div>
+                            <div class="bg-white w-[90%] h-[20%] rounded p-4 text-black flex items-center border border-black text-sm" id="divt-3.2">
+                                <h2 class="text-xl"><b>Mins :</b></h2>
+                            </div>
+                            <div class="bg-white w-[90%] h-[20%] rounded p-4 text-black flex items-center border border-black text-sm" id="divt-3.3">
+                                <h2 class="text-xl"><b>Secs :</b></h2>
+                            </div>
+                            <div class="bg-red-500 w-[90%] h-[20%] rounded p-4 flex items-center justify-center cursor-pointer" id="divt-3.4">
+                                <h2 class="text-2xl"><b>Save</b></h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Divs -->
+                    <div class="bg-[whitesmoke] p-4 w-[95%] h-[45%] flex justify-center rounded" id="div-b">
+                        <!-- table buttons Div -->
+                        <div class="bg-white w-[90%] h-[20%] rounded p-4 text-black flex items-center border border-black text-sm content-start" id="divt-4">
+                            <div class="bg-white  p-4 text-black flex items-center border border-red text-sm content-start" id="divt-4.1">
+                                Clear
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Div -->
+            <div class="hidden p-4 border border-white" id="stats-content">
+                <h1 class="text-2xl">Query Stats Div</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showContent(content) {
+            document.getElementById('home-content').classList.add('hidden');
+            document.getElementById('table-content').classList.add('hidden');
+            document.getElementById('stats-content').classList.add('hidden');
+            document.getElementById('home-icon').classList.remove('icon-selected');
+            document.getElementById('table-icon').classList.remove('icon-selected');
+            document.getElementById('stats-icon').classList.remove('icon-selected');
+            
+            if (content === 'table') {
+                document.getElementById('table-content').classList.remove('hidden');
+                document.getElementById('table-icon').classList.add('icon-selected');
+            } else if (content === 'stats') {
+                document.getElementById('stats-content').classList.remove('hidden');
+                document.getElementById('stats-icon').classList.add('icon-selected');
+            } else {
+                document.getElementById('home-content').classList.remove('hidden');
+                document.getElementById('home-icon').classList.add('icon-selected');
+            }
+        }
+    </script>
+</body>
+</html>

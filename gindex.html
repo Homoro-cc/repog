@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="gstyles.css"/>
+
+    <!-- Material Symbols for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+</head>
+<body>
+
+    <!-- Change this in index.html -->
+    <div class="left-ribbon">
+        <span class="material-symbols-outlined icon" onclick="window.location.href='index.html'">home</span>
+        <span class="material-symbols-outlined icon" onclick="window.location.href='tindex.html'">table</span>
+        <span class="material-symbols-outlined icon icon-selected" onclick="showContent('stats')">query_stats</span>
+    </div>
+
+    <!-- Title Bar -->
+    <div class="title-bar">
+        <h2>Graffana</h2>
+        <div id="notification" class="notification"></div>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Fmonitor.trax-cloud.com%2Fd%2FS__fmtRnz%2Fqat-outflows-2%3ForgId%3D18%26refresh%3D20m%26var-staff_id%3DK17952%26from%3Dnow%252Fd%26to%3Dnow%252Fd&sa=D&sntz=1&usg=AOvVaw3G1kRGcjx_HSEZgfVAvM9J" 
+           target="_blank" class="my-outflow-button">My Outflow</a>
+    </div>
+
+    <div class="content-space"></div>
+
+
+    <!-- Divh Home -->
+    <div class="content-div" id="divh">
+        <div class="info-row button-container">
+            <a href="#divx" class="custom-button custom-button-chart">Pending Q - Chart</a>
+            <a href="#divy" class="custom-button custom-button-list">Pending Q - List</a>
+            <a href="#divz" class="custom-button custom-button-outflows">QAT Outflows</a>
+            <a href="#divc" class="custom-button custom-button-links">Grafana Sites Links</a>
+            <a href="#diva" class="custom-button custom-button-logins">Grafana Sites Logins</a>
+        </div>
+    </div>
+
+
+
+    <!-- Divx -->
+    <div class="content-div" id="divx">
+        <b><u><h1 style="text-align: center;">Pending Q - Chart</h1></u></b>
+        <div class="info-row button-container">
+            <a href="https://www.google.com/" target="_blank" class="custom-button custom-button-chart">Stitching</a>
+            <a href="https://www.google.com/" target="_blank" class="custom-button custom-button-mask">Masking</a>
+            <a href="https://www.google.com/" target="_blank" class="custom-button custom-button-engine">Masking Engine</a>
+            <a href="https://www.google.com/" target="_blank" class="custom-button custom-button-price">Masking Price Labels</a>
+            <a href="https://www.google.com/" target="_blank" class="custom-button custom-button-validation">Validation</a>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Divy -->
+    <div class="content-div" id="divy">
+        <b><u><h1 style="text-align: center;">Pending Q - List</h1></u></b>
+        <div class="info-row button-container">
+            <a href="https://www.google.com/" target="_blank" class="custom-button custom-button-chart">Stitching</a>
+            <a href="https://www.google.com/" target="_blank" class="custom-button custom-button-mask">Masking</a>
+            <a href="https://www.google.com/" target="_blank" class="custom-button custom-button-engine">Masking Engine</a>
+            <a href="https://www.google.com/" target="_blank" class="custom-button custom-button-price">Masking Price Labels</a>
+            <a href="https://www.google.com/" target="_blank" class="custom-button custom-button-validation">Validation</a>
+        </div>
+    </div>
+
+
+
+    <!-- Divz -->
+    <div class="content-div" id="divz">
+        <b><u><h1 style="text-align: center;">QAT Outflows</h1></u></b>
+        <div class="info-row button-container">
+            <a href="https://www.google.com/" target="_blank" class="custom-button custom-button-outflows">Outflow #1</a>
+            <a href="https://www.google.com/" target="_blank" class="custom-button custom-button-outflows">Outflow #2</a>
+        </div>
+    </div>
+
+
+
+
+        <!-- Divc -->
+    <div class="content-div" id="divc">
+        <b><u><h1 style="text-align: center;">Grafana Sites Links</h1></u></b>
+        <div class="info-row button-container">
+            <a href="https://www.google.com/" target="_blank" class="custom-button custom-button-links">QAT Outflows</a>
+            <a href="https://www.google.com/" target="_blank" class="custom-button custom-button-links">AMEA Pending Que List</a>
+            <a href="https://www.google.com/" target="_blank" class="custom-button custom-button-links">AMEA Pending Que Chart</a>
+        </div>
+    </div>
+
+
+
+   <!-- Diva -->
+    <div class="content-div" id="diva">
+        <b><u><h1 style="text-align: center;">Grafana Sites Logins</h1></u></b>
+        <div class="info-row">
+            <h2 style="display: inline; font-weight: bold;">User Name:</h2>
+            <h3 style="display: inline; margin-left: 10px;">gss.kurunegala</h3>
+        </div>
+        <div class="info-row">
+            <h2 style="display: inline; font-weight: bold;">Password:</h2>
+            <h3 style="display: inline; margin-left: 10px;">gss.kurunegala</h3>
+        </div>
+    </div>
+
+
+
+    <!-- Scroll Boxes -->
+    <div class="scroll-boxes">
+        <div class="scroll-box" id="scroll-to-top">☝️</div>
+        <div class="scroll-box" id="scroll-to-bottom">👇</div>
+    </div>
+
+    <script src="gscripts.js"></script>
+</body>
+</html>

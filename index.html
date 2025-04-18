@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <!-- Material Symbols for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+</head>
+<body>
+
+    <!-- Change this in index.html -->
+    <div class="left-ribbon">
+        <span class="material-symbols-outlined icon icon-selected" onclick="showContent('home')">home</span>
+        <span class="material-symbols-outlined icon" onclick="window.location.href='tindex.html'">table</span>
+        <span class="material-symbols-outlined icon" onclick="window.location.href='gindex.html'">query_stats</span>
+    </div>
+
+    <!-- Title Bar -->
+    <div class="title-bar">
+        <h2>Admin Home Panel</h2>
+        <div id="notification" class="notification"></div>
+    </div>
+
+
+
+    <div class="content-space"></div>
+
+    <!-- Divb -->
+    <div class="content-div" id="divb">
+        <div class="buttons">
+            <div>
+                <button class="clear-button">Clear</button>
+                <button class="copy-button">Copy</button>
+            </div>
+            <div class="right-buttons">
+                <button class="edit-button">Edit</button>
+                <button class="save2-button">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Boxes -->
+    <div class="scroll-boxes">
+        <div class="scroll-box" id="scroll-to-top">☝️</div>
+        <div class="scroll-box" id="scroll-to-bottom">👇</div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
