@@ -248,8 +248,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (taskSelect.value === "Stitching") {
             projectSelect.innerHTML = stitchingProjects.map(project => `<option value="${project}">${project}</option>`).join('');
-        } else if (taskSelect.value === "Masking Engine" || taskSelect.value === "Masking Price Labels" || taskSelect.value === "Voting") {
-            // Use maskingProjects for "Voting" as well
+        } else if (taskSelect.value === "Masking Engine" || taskSelect.value === "Masking Price Labels" || taskSelect.value === "Offline Validation") {
+            // Use maskingProjects for "Offline Validation" as well
+            projectSelect.innerHTML = maskingProjects.map(project => `<option value="${project}">${project}</option>`).join('');
+        } else if (taskSelect.value === "Engine Validation") {
+            // Show voting table projects for "Engine Validation"
             projectSelect.innerHTML = maskingProjects.map(project => `<option value="${project}">${project}</option>`).join('');
         } else {
             projectSelect.innerHTML = "";
