@@ -205,6 +205,10 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
+button:hover, .custom-button:hover {
+    font-weight: bold;
+}
+
 .custom-button:active {
     transform: translateY(1px);
 }
