@@ -27,16 +27,20 @@ document.addEventListener("DOMContentLoaded", function() {
             
             // Extract stitching projects
             const stitchingRows = doc.querySelector('.table-wrapper:first-child table tbody').querySelectorAll('tr');
-            const stitchingProjects = Array.from(stitchingRows).map(row => row.cells[1].textContent);
+            const stitchingProjects = Array.from(stitchingRows).map(row => row.cells[1].textContent.trim());
             
             // Extract masking projects
-            const maskingRows = doc.querySelector('.table-wrapper:last-child table tbody').querySelectorAll('tr');
-            const maskingProjects = Array.from(maskingRows).map(row => row.cells[1].textContent);
+            const maskingRows = doc.querySelectorAll('.table-wrapper')[1].querySelector('table tbody').querySelectorAll('tr');
+            const maskingProjects = Array.from(maskingRows).map(row => row.cells[1].textContent.trim());
             
-            return { stitchingProjects, maskingProjects };
+            // Extract voting projects
+            const votingRows = doc.querySelectorAll('.table-wrapper')[2].querySelector('table tbody').querySelectorAll('tr');
+            const votingProjects = Array.from(votingRows).map(row => row.cells[1].textContent.trim());
+            
+            return { stitchingProjects, maskingProjects, votingProjects };
         } catch (error) {
             console.error('Error fetching projects:', error);
-            return { stitchingProjects: [], maskingProjects: [] };
+            return { stitchingProjects: [], maskingProjects: [], votingProjects: [] };
         }
     }
 
@@ -244,18 +248,49 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Event listener for task select change
     taskSelect.addEventListener("change", async () => {
-        const { stitchingProjects, maskingProjects } = await fetchProjects();
+        const projects = await fetchProjects();
+        const stitchingProjects = projects.stitchingProjects;
+        const maskingProjects = projects.maskingProjects;
+        const votingProjects = projects.votingProjects;
+
+        // Clear existing options
+        projectSelect.innerHTML = '';
 
         if (taskSelect.value === "Stitching") {
-            projectSelect.innerHTML = stitchingProjects.map(project => `<option value="${project}">${project}</option>`).join('');
-        } else if (taskSelect.value === "Masking Engine" || taskSelect.value === "Masking Price Labels" || taskSelect.value === "Offline Validation") {
-            // Use maskingProjects for "Offline Validation" as well
-            projectSelect.innerHTML = maskingProjects.map(project => `<option value="${project}">${project}</option>`).join('');
-        } else if (taskSelect.value === "Engine Validation") {
-            // Show voting table projects for "Engine Validation"
-            projectSelect.innerHTML = maskingProjects.map(project => `<option value="${project}">${project}</option>`).join('');
-        } else {
-            projectSelect.innerHTML = "";
+            // Add stitching projects
+            stitchingProjects.forEach(project => {
+                if (project.trim() !== '') { // Skip empty projects
+                    const option = document.createElement("option");
+                    option.value = project;
+                    option.textContent = project;
+                    projectSelect.appendChild(option);
+                }
+            });
+        } 
+        else if (taskSelect.value === "Masking" || 
+                 taskSelect.value === "Masking Engine" || 
+                 taskSelect.value === "Masking Price Labels") {
+            // Add masking projects
+            maskingProjects.forEach(project => {
+                if (project.trim() !== '') { // Skip empty projects
+                    const option = document.createElement("option");
+                    option.value = project;
+                    option.textContent = project;
+                    projectSelect.appendChild(option);
+                }
+            });
+        }
+        else if (taskSelect.value === "Offline Validation" || 
+                 taskSelect.value === "Engine Validation") {
+            // Add voting projects
+            votingProjects.forEach(project => {
+                if (project.trim() !== '') { // Skip empty projects
+                    const option = document.createElement("option");
+                    option.value = project;
+                    option.textContent = project;
+                    projectSelect.appendChild(option);
+                }
+            });
         }
     });
 
